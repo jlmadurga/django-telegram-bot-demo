@@ -1,0 +1,5 @@
+**{{ question.question_text }}**
+
+{% for choice in question.choice_set.all %}
+	- {{ choice.id }}: {{ choice.choice_text }}
+{% endfor %}

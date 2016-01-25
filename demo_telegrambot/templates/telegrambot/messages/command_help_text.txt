@@ -1,0 +1,4 @@
+Commands:
+_/question_ - Polls questions
+_/start_ - Wellcome message
+_/help_ - Me :)

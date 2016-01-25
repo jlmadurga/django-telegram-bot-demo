@@ -1,0 +1,2 @@
+Wellcome to **django telegram bot demo**.
+See polls questions in _/question_ the vote them!

@@ -1,0 +1,2 @@
+Select from list:{% for question in questions %}
+{{ question.id }}:{{ question.question_text }}{% endfor %}
