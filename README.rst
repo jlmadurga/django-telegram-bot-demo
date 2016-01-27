@@ -26,6 +26,15 @@ Create superuser to create questions and choices in admin and play::
 
 	$ python manage.py createsuperuser
 	
+Use command  ``set_webhook`` to specify the url to receive the incoming updates via webhook::
+
+	$ python manage.py set_webhook
+	
+	
+To set the webhook for telegram you need ``django.contrib.sites`` installed, ``SITE_ID`` configured in settings and
+with it correct value in the DB.
+
+
 **NOTE**: You can test it locally with settings_local or using django-telegram-bot tasks but this demo uses
 the webhook and telegram requires secure connection and ssl.
 https://core.telegram.org/bots/api#getting-updates

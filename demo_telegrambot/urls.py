@@ -19,7 +19,7 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^polls/', include('polls.urls')),
-    url(r'^telegrambot/', include('telegrambot.urls'), name="telegrambot"),
+    url(r'^telegrambot/', include('telegrambot.urls', namespace="telegrambot")),
     url(r'^admin/', admin.site.urls),
 ]
 
