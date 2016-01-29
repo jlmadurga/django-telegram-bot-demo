@@ -186,6 +186,6 @@ LOGGING = {
 
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
-TELEGRAM_BOT_COMMANDS_CONF = "polls.commands"
+TELEGRAM_BOT_HANDLERS_CONF = "polls.bot_handlers"
 TELEGRAM_BOT_TOKEN = os.environ.get('TELEGRAM_BOT_TOKEN', None)
 

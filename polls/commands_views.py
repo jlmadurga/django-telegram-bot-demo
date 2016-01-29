@@ -2,21 +2,23 @@ from telegrambot.generic import TemplateCommandView, ListDetailCommandView, List
 from polls.models import Question, Choice
 
 class StartCommandView(TemplateCommandView):
-    template_code = "start"
+    template_text = "bot/messages/command_start_text.txt"
     
 class HelpCommandView(TemplateCommandView):
-    template_code = "help"
+    template_text = "bot/messages/command_help_text.txt"
     
 class UnknownCommandView(TemplateCommandView):
-    template_code = "unknown"    
+    template_text = "bot/messages/command_unknown_text.txt"    
 
 class QuestionListCommandView(ListCommandView):
-    template_code = "question_list"
+    template_text = "bot/messages/command_question_list_text.txt"
+    template_keyboard = "bot/messages/command_question_list_keyboard.txt"
     context_object_name = "questions"
     model = Question
     
 class QuestionDetailCommandView(DetailCommandView):
-    template_code = "question_detail"
+    template_text = "bot/messages/command_question_detail_text.txt"
+    template_text = "bot/messages/command_question_detail_keyboard.txt"
     context_object_name = "question"
     model = Question
     slug_field = "id"
@@ -26,7 +28,7 @@ class QuestionCommandView(ListDetailCommandView):
     detail_view_class = QuestionDetailCommandView
     
 class VoteCommandView(TemplateCommandView):
-    template_code = "vote"
+    template_text = "bot/messages/command_vote_text.txt"
     context_object_name = "question"
     
     def get_context(self, update):
