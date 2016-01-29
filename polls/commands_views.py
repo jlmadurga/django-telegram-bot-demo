@@ -18,7 +18,7 @@ class QuestionListCommandView(ListCommandView):
     
 class QuestionDetailCommandView(DetailCommandView):
     template_text = "bot/messages/command_question_detail_text.txt"
-    template_text = "bot/messages/command_question_detail_keyboard.txt"
+    template_keyboard = "bot/messages/command_question_detail_keyboard.txt"
     context_object_name = "question"
     model = Question
     slug_field = "id"
@@ -31,7 +31,7 @@ class VoteCommandView(TemplateCommandView):
     template_text = "bot/messages/command_vote_text.txt"
     context_object_name = "question"
     
-    def get_context(self, update):
+    def get_context(self, update, **kwargs):
         choice_id = update.message.text.split(' ')[1]
         selected_choice = Choice.objects.get(pk=choice_id)
         selected_choice.votes += 1
