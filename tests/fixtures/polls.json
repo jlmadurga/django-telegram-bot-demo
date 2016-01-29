@@ -1,0 +1,28 @@
+[
+{
+  "model": "polls.question",
+  "pk": 1,
+  "fields": {
+    "question_text": "\u00bfBeach or Mountain?",
+    "pub_date": "2016-01-24T22:01:09Z"
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 1,
+  "fields": {
+    "question": 1,
+    "choice_text": "Mountain please",
+    "votes": 2
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 2,
+  "fields": {
+    "question": 1,
+    "choice_text": "Beach",
+    "votes": 2
+  }
+}
+]
