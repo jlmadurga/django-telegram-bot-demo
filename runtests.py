@@ -3,7 +3,6 @@ import os
 try:
     from django.conf import settings
     from django.test.utils import get_runner
-    os.environ.setdefault('TELEGRAM_BOT_TOKEN', '174446943:AAEcMXep4Uc51sAkYcTJC7vEoLmmxwnQgcc')
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'demo_telegrambot.settings_local')
     try:
         import django
