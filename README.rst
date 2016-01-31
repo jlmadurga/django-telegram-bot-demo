@@ -14,9 +14,6 @@ Installation
 -------------------------------------
 
 The repo is setup for heroku but.So you only need to clone it, create heroku app and push it. 
-Also you need to set one enviroment variable for Telegram token: **TELEGRAM_BOT_TOKEN**
-
-To get that token you need to create a Telegram bot https://core.telegram.org/bots.
 
 When you have your django-app installed migrate DB::
 
@@ -26,18 +23,15 @@ Create superuser to create questions and choices in admin and play::
 
 	$ python manage.py createsuperuser
 	
-Use command  ``set_webhook`` to specify the url to receive the incoming updates via webhook::
-
-	$ python manage.py set_webhook
+To get that token you need to create a Telegram bot https://core.telegram.org/bots. After creating a bot in Telegram Platform, 
+create at least one bot with django admin. Token is the only required field. You may need to provided public key certificate 
+for your server. https://core.telegram.org/bots/self-signed Heroku has https and ssl by default so it is a good option if 
+you dont want to deal with that.
 	
 	
 To set the webhook for telegram you need ``django.contrib.sites`` installed, ``SITE_ID`` configured in settings and
 with it correct value in the DB.
 
-
-**NOTE**: You can test it locally with settings_local or using django-telegram-bot tasks but this demo uses
-the webhook and telegram requires secure connection and ssl.
-https://core.telegram.org/bots/api#getting-updates
 
 Web VS Telegram Bot
 ----------------------------------------------------------
