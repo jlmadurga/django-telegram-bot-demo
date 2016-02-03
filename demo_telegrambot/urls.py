@@ -20,6 +20,7 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^polls/', include('polls.urls')),
     url(r'^telegrambot/', include('telegrambot.urls', namespace="telegrambot")),
+    url(r'^accounts/login/$', 'django.contrib.auth.views.login',name="my_login"),
     url(r'^admin/', admin.site.urls),
 ]
 

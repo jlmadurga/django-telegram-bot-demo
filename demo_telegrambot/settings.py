@@ -180,11 +180,12 @@ LOGGING = {
             'handlers': ['console'],
             'propagate': False,
             'level': 'DEBUG',
-        },
+        },        
     }   
 }
 
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
-
+LOGIN_REDIRECT_URL = '/polls/'
 TELEGRAM_BOT_HANDLERS_CONF = "polls.bot_handlers"
+TELEGRAM_BOT_TOKEN_EXPIRATION = "2" # tow hours before a token expires
 
