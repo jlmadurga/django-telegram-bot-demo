@@ -1,4 +1,5 @@
-from telegrambot.generic import TemplateCommandView, ListDetailCommandView, ListCommandView, DetailCommandView
+from telegrambot.bot_views.generic import TemplateCommandView, ListDetailCommandView, ListCommandView, \
+    DetailCommandView
 from polls.models import Question, Choice
 
 class StartCommandView(TemplateCommandView):
