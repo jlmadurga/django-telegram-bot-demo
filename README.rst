@@ -7,7 +7,8 @@ Same actions over polls by web app can be done with the Telegram bot.
 
 * List questions
 * List choices of questions
-* Vote for a choice
+* Vote for a choice only once you have authenticated chat. You need to register in the website and login when telegram
+requires.
 
 
 Installation

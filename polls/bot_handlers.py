@@ -1,4 +1,4 @@
-from polls.commands_views import StartCommandView, UnknownCommandView, \
+from polls.bot_views import StartCommandView, UnknownCommandView, \
     QuestionCommandView, VoteCommandView, HelpCommandView
 
 from telegrambot.handlers import command, unknown_command
